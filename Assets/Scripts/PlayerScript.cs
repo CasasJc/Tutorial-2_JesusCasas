@@ -55,6 +55,7 @@ public class PlayerScript : MonoBehaviour
         anim = GetComponent<Animator>();
 
 
+        
 
     }
 
@@ -67,10 +68,6 @@ public class PlayerScript : MonoBehaviour
 
         Lives.text = "Lives: " + LivesValue.ToString();
 
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
 
 
         isOnGround = Physics2D.OverlapCircle(groundcheck.position, checkRadius, allGround);
@@ -167,7 +164,11 @@ public class PlayerScript : MonoBehaviour
         if (LivesValue <= 0)
         {
             LoseText.text = "You Lose!";
-        }   
+        }
+
+
+       
     }
+
 
 }
